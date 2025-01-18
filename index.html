@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Almendra SC' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Doors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('image/hutan.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Almendra SC';font-size: 22px;
+        }
+        body img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            margin-top: 50px;
+        }
+        .doors-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+        .door {
+            width: 150px;
+            height: 320px;
+            margin: 0 20px;
+            border: 5px solid #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background-color: #222; /* Fallback color */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            overflow: hidden;
+        }
+        .door img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .door:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+        }
+        .door-label {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose one door...</h1>
+    <p>Be careful with your choice...<br>Each door leads you to different experiences.</p>
+
+    <div class="doors-container">
+        <div class="door" onclick="location.href='story1.php';">
+            <img src="image/door.png" alt="Door 1">
+            <div class="door-label">Door 1<br>ㅤ </div>
+        </div>
+        <div class="door" onclick="location.href='story2.php';">
+            <img src="image/door.png" alt="Door 2">
+            <div class="door-label">Door 2<br>ㅤ </div>
+        </div>
+        <div class="door" onclick="location.href='story3.php';">
+            <img src="image/door.png" alt="Door 3">
+            <div class="door-label">Door 3<br>ㅤ </div>
+        </div>
+    </div>
+</body>
+</html>
